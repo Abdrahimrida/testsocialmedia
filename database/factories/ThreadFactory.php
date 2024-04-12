@@ -20,6 +20,9 @@ class ThreadFactory extends Factory
             'user_id' => function () {
                 return \App\Models\User::factory()->create()->id;
             },
+            'profile_id' => function () {
+                return \App\Models\Profile::factory()->create()->id;
+            },
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraph,
             'likes_count' => $this->faker->numberBetween(0, 1000),
